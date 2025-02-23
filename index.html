@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huynh Son</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="mainpic.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce4682408c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="home">
+        <div class="navbar">
+            <div class="logo">
+                <a href="">HUYNH SON</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#showcase">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-content">
+            <h1>Hello, I'm <br> Dang Huynh Son.</h1>
+            <p>A Front-End Developer Intern with a solid foundation in HTML, CSS, and JavaScript, along with experience working with React.I am passionate about creating user-friendly interfaces, optimizing user experience, and always eager to learn new technologies.</p>
+            <ul>
+                <li><a href="#contact"><button class="btn-contact">CONTACT ME <span>&#x2022;</span></button></a></li>
+                <li><a href="https://www.facebook.com/son.cai.be"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://github.com/sondang710?tab=repositories"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+            <div class="mainpic"><img src="mainpic.jpg" alt=""></div>
+        </div>
+    </div>
+    <div id="showcase">
+        <h1>Featured Projects</h1>
+        <p>Here are some of the selected projects that showcase my passion for Front-end development.</p>
+        <div class="showcase-content">
+            <div class="project">
+                <div class="project-image">
+                    <img src="project1.png" alt="">
+                </div>
+                <div class="project-content">
+                    <h2>Website Chatting Using React and Firebase</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum non neque congue malesuada. Quisque volutpat est sed ipsum tristique, a elementum purus consectetur.</p>
+                    <h3>PROJECT INFOR</h3>
+                    <h3>YEAR <span>2024</span></h3>
+                    <h3>Role <span>Front-end Developer</span></h3>
+                    <a href="https://github.com/huynhsontd/chat-app-react-firebase">VIEW ON GITHUB <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <img src="project2.png" alt="">
+                </div>
+                <div class="project-content">
+                    <h2>Simple Music Player</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum non neque congue malesuada. Quisque volutpat est sed ipsum tristique, a elementum purus consectetur.</p>
+                    <h3>PROJECT INFOR</h3>
+                    <h3>YEAR <span>2023</span></h3>
+                    <h3>Role <span>Front-end Developer</span></h3>
+                    <a href="https://sondang710.github.io/Music-Player/">VIEW ON GITHUB<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <h2>I'm a Front-End Developer</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum non neque congue malesuada. Quisque volutpat est sed ipsum tristique, a elementum purus consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima rem quae facilis, iure voluptates harum eveniet aperiam porro omnis velit fugit quam voluptatem! Quisquam a voluptatem animi porro vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, dicta! Vero, ex cumque delectus repudiandae odio inventore perferendis illum tempore, a itaque ut temporibus commodi? Repellat fuga eos distinctio quae.</p>
+            <a href="">MORE ABOUT ME </a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="bio">
+            <h1>Let's Connect With Me</h1>
+            <p>Say hello at <span>soncaibe007@gmail.com</span></p>
+            <p>For more information, here is my <a href="">resume</a></p>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Name" id="name" required>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <textarea type="message" name="message" placeholder="Message" id="message" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+                <p id="statusMessage"></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn trang web tải lại
+        
+            var formData = new FormData(this);
+        
+            fetch("https://script.google.com/macros/s/AKfycbxQlAiJHhN8r0InYuQTQ_Qvnh1NQvmCsQbP_pHoyhQD1M5s-LhFYwyscvx4nXCatB0YKA/exec", {  // Thay bằng URL bạn lấy từ Google Apps Script
+                method: "POST",
+                body: formData,
+                mode: "no-cors",
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("statusMessage").innerText = "Gửi thành công!";
+                console.log("OK");
+                document.getElementById("contactForm").reset(); // Xóa nội dung form
+            })
+            .catch(error => {
+                document.getElementById("statusMessage").innerText = "Có lỗi xảy ra!";
+            });
+        });
+        </script>
+</body>
+</html>

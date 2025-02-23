@@ -1,0 +1,429 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #0A0A0A;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #ccc;
+    transition: linear 0.5s;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 30px ;
+}
+
+
+.menu ul  { 
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    font-family: "Manrope", serif;
+    text-decoration: none;
+    color: #ccc;
+    padding: 15px;
+    font-weight: 200;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #7a7a7a;
+}
+
+.header-content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    top: 30%;
+    left: 5%;
+}
+.header-content h1 {
+    font-size: 90px;
+    color: #fff;
+}
+
+.header-content p {
+    font-family: "Manrope", serif;
+    width: 40%;
+    font-weight: 200;
+    font-size: 15px;
+    color: #ccc;
+}
+
+
+.header-content .btn-contact {
+    width: 150px;
+    height: 50px;
+    font-size: 21px;
+    background-color: #D3E97A;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #7a7a7a;
+    }
+}
+
+.header-content .btn-contact span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: #D3E97A;
+
+}
+
+.header-content a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: #4a4949;
+}
+
+.header-content ul {
+    display: flex;
+    margin-top: 30px;
+}
+
+.header-content ul li {
+    margin-right: 20px;
+    list-style: none;
+}
+
+
+.mainpic {
+    position: absolute;
+    right: 10%;
+    height: 700px;
+    width: 500px;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 30px;
+    background-size: cover;
+    transform: translateY(-20%);
+    img {
+        width: 100%;
+        height: 700px;
+        transform: scale(1.0);
+    }
+}
+
+
+#showcase {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-top: 5%;
+    border-bottom: 1px solid #ccc;
+
+}
+
+#showcase > h1 {
+    font-size: 50px;
+    color: #fff;
+    width: 60%;
+}
+
+#showcase > p {
+    font-family: "Manrope", serif;
+    width: 40%;
+    font-weight: 200;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.showcase-content {
+    width: 90%;
+    margin-top: 5%;
+}
+
+.showcase-content .project {
+display: flex;
+flex-direction: row;
+margin-bottom: 5%;
+padding-left: 5%;
+}
+
+.showcase-content .project .project-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7a7a7a;
+    border-radius: 20px;
+    
+}
+
+.showcase-content .project .project-image img {
+    width: 600px;
+    height: 400px;
+    margin: 20px 20px;
+    border-radius: 30px;
+}
+
+.showcase-content .project .project-content {
+    font-family: "Manrope", serif;
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 20px;
+    min-height: 380px;
+}
+
+.showcase-content .project .project-content h2 {
+    font-family: "Bebas Neue", serif;
+    font-size: 40px;
+    color: #fff;
+    width: 130%;
+}
+
+.showcase-content .project .project-content p {
+    font-family: "Manrope", serif;
+    font-size: 15px;
+    color: #fff;
+    width: 120%;
+}
+
+.showcase-content .project .project-content h3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 30px;
+    color: #fff;
+    width: 120%;
+    border-bottom: 1px solid #ccc;
+
+    span {
+        margin-top: 10px;
+        font-family: "Manrope", serif;
+        font-size: 18px;
+        font-weight: 300;
+        bottom: 0;
+    }
+}
+
+.showcase-content .project .project-content a {
+    font-family: "Manrope", serif;
+    position: relative;
+    font-size: 20px;
+    color: #D7E888;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+    padding: 5px;
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+.showcase-content .project .project-content a::after {
+    content: "";
+    position: absolute;
+    left: 50%; 
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #D7E888;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.showcase-content .project .project-content a:hover::after {
+    width: 100%; 
+}
+
+#about {
+    padding: 5%;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+#about h1 {
+    font-size: 100px;
+    color: #fff;
+}
+
+#about .about-content {
+    padding-top: 2%;
+    width: 60%;
+    padding-left: 10%;
+}
+#about .about-content h2 {
+    width: 60%;
+    font-size: 40px;
+    color: #fff;
+    padding: 30px 0;
+}
+
+#about .about-content p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ccc;
+    line-height: 30px;
+    width: 90%;
+}
+
+#about .about-content a {
+    position: relative;
+    display: inline-block;
+    font-family: "Manrope", sans-serif;
+    text-decoration: none;
+    font-size: 24px;
+    color: #D7E888;
+    padding-top: 20px;
+}
+
+#about .about-content a::after {
+    content: "";
+    position: absolute;
+    left: 50%; 
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #D7E888;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+#about .about-content a:hover::after {
+    width: 100%; 
+}
+
+#contact {
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+#contact .bio h1 {
+    font-size: 60px;
+    color: #fff;
+}
+
+#contact .bio p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #ccc;
+    line-height: 30px;
+    width: 90%;
+}
+#contact .bio span {
+    font-family: "Manrope", sans-serif;
+    border-bottom: 1px solid #D7E888;
+}
+#contact .bio a {
+    font-family: "Manrope", sans-serif;
+    text-decoration: none;
+    color: #ccc;
+    border-bottom: 1px solid #D7E888;
+}
+#contact .contact-form {
+    margin-right: 5%;
+}
+#contact .contact-form form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact .contact-form form input {
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    padding: 20px;
+    width: 700px;
+    min-height: 40px;
+    margin: 5% 10% 5% 0;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #1A1A1A;
+    color: #fff;
+}
+#contact .contact-form form textarea {
+    min-height: 100px;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    width: 700px;
+    margin: 5% 10% 5% 0;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #1A1A1A;
+    color: #fff;
+}
+ 
+#contact .contact-form form input::placeholder,
+#contact .contact-form form textarea::placeholder {
+    color: #fff;
+}
+
+#contact .contact-form form textarea:focus,
+#contact .contact-form form input:focus {
+    border: 2px solid #D7E888;
+}
+
+#contact .contact-form form button {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    width: 40%;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5% 10% 5% 0;
+    border-radius: 20px;
+    background-color: #D7E888;
+    color: #1A1A1A;
+    border: none;
+    cursor: pointer;
+}
+
+#contact .contact-form form button:hover {
+    background-color: #C4D69F;
+}
+
+
+
+
