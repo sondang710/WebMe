@@ -11,7 +11,7 @@ body {
     background-color: #0A0A0A;
 }
 
-#home {
+#home, #about-home {
     width: 100%;
     height: 100vh;
     border-bottom: 1px solid #ccc;
@@ -23,7 +23,6 @@ body {
     display: flex;
     justify-content:space-between;
     padding-top: 20px;
-    position: fixed;
 }
 
 .logo a {
@@ -55,11 +54,10 @@ body {
     color: #7a7a7a;
 }
 
-.header-content {
+#home > .header-content {
     display: flex;
     position: absolute;
     flex-direction: column;
-
     top: 30%;
     left: 5%;
 }
@@ -78,7 +76,7 @@ body {
 
 
 .header-content .btn-contact {
-    width: 150px;
+    max-width: 250px;
     height: 50px;
     font-size: 21px;
     background-color: #D3E97A;
@@ -229,11 +227,16 @@ padding-left: 5%;
     border-bottom: 1px solid #ccc;
 
     span {
+        right: 0;
         margin-top: 10px;
         font-family: "Manrope", serif;
         font-size: 18px;
         font-weight: 300;
-        bottom: 0;
+    }
+
+    img {
+        width: 50px;
+        margin-left: 10px;
     }
 }
 
@@ -427,3 +430,141 @@ padding-left: 5%;
 
 
 
+#toast {
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    min-width: 200px;
+    height: auto;
+    background-color: #A64535;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 2%;
+    right: -18%;
+    z-index: 1;
+    opacity: 0;
+    transition: right 1s, opacity 1s;
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #fff;
+            font-weight: 600;
+        }
+}
+
+#toast.show {
+    right: 2%;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* About page CSS */
+
+#about-home {
+    max-width: 100%;
+    min-height: 200vh;
+    overflow: hidden;
+}
+
+#about-home > .header-content {
+    
+}
+#about-home > .header-content > h1 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#about-home > .header-content > .about-content > h2 {
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    width: 90%;
+    padding-bottom: 10px;
+    line-height: 40px;
+}
+#about-home > .header-content > .about-content > p {
+    width: 80%;
+    line-height: 35px;
+}
+
+#about-home > .header-content > .about-content > img {
+
+}
+
+#about-home > .header-content > .about-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 55%;
+    top: 30%;
+    
+}
+
+#about-home > .mainpic {
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 700px;
+    top: 40%;
+    left: 10%;
+    box-shadow: 8px 4px 8px 0 rgba(255, 255, 255, 0.111), 0 6px 20px 0 rgba(255, 255, 255, 0.211);
+
+    img {
+        width: 100%;
+        scale: 1;
+        object-fit: cover;
+        object-position: 0 80%;
+    }
+}
+
+
+#about-home > .skills {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    left: 10%;
+    top: 40%;
+}
+
+#about-home > .skills > h1 {
+    color: #fff;
+    font-size: 50px;
+}
+#about-home > .skills > .skill-content {
+    position: relative;
+    
+    left: 7%;
+}
+#about-home > .skills > .skill-content > p {
+    font-family: "Manrope", sans-serif;
+    color: #ccc;
+    font-size: 15px;
+    font-weight: 400;
+    width: 60%;
+    line-height: 30px;
+}
+#about-home > .skills > .skill-content > ul {
+    position: absolute;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#about-home > .skills > .skill-content > ul > li {
+    color: #ccc;
+    list-style: none;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 20px 40px;
+    margin: 10px;
+}
